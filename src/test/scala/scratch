@@ -1,0 +1,20 @@
+toPostFix(infix)
+
+postFix = {}
+
+opStack = {}
+
+
+for(token in inflix)
+
+processToken(token, postFix, opStack)
+
+while(notEmpty(opStack))
+op = pop(opStack)
+add(postFix, op)
+
+
+
+
+
+return postFix

@@ -10,6 +10,8 @@ class GreedyAlgorithmsTest extends FunSpec {
     }
 
     it("minimum rolls required to fill parameter without mutating and using case class") {
+
+
       rollsCount(List(4, 2, 1), 10) shouldBe Choice(0, List(4, 4, 2))
     }
 
