@@ -1,30 +1,18 @@
 
-// If we have a mathematical expression its not easy to find a programming solution as it has inflix notations
-// and evalution is done by operator precedence for example multiplication is done first then addition etc
-//When we have to compare operators if * has more precedence over - we move * to left and move - to bottom
-// we dont compare ( when working on brackets
-// when we encounter ) we flush every thing until ( to left and then we get rid of ( and this)
-//  this is evaluated by three way junction
-//first we encode expression in a different format and then evaluate an answer . we use postfix operator first
-// 2 + 1 becomes  2 1 +
-// 5 + 7 / 2 becomes 5 7 2 / +
-// (5 + 7) / 2 becomes 5 7 + 2 /
+// We are used to doing mathematical expression using infix notations, which will be hard to write a programme to evaluate this expression
+//Rules:
+//One: Numbers go directly from right to left
+//Operators go south
+//Operators then move to left
+// if we are moving operators to south some operators has precedence which we need to check because if * is already in south and we have to compare when working with - then we flush * to left
+// if we work on parenthesis we move left parentheis as normal and when we work on close parenthesis , we remove both parenthesis and move operands to left
+
+
+
 object ShuntingYardAlgorithm {
 
-
- def evaluate(postFix: List[String]): Double = {
-
-   postFix.foldLeft(List[Double]())((nStack, token) => {
-
-     (nStack, token) match {
-       case (a :: b :: tail, "+") => (a + b) +: tail
-       case (a :: b :: tail, "-") => (a - b) +: tail
-       case (a :: b :: tail, "*") => (a * b) +: tail
-       case (a :: b :: tail, "/") => (a / b) +: tail
-       case (_, n) => n.toDouble +: nStack
-     }
-   }).head
-
- }}
+ //def infixToPostFix("")
 
 
+
+}
